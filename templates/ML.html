@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Disease Prediction</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url("/static/images/medical-report-with-medical-equipment.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 36px;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            font-size: 18px;
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .checkbox-label {
+            flex-basis: calc(33.33% - 10px);
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Disease Prediction</h1>
+        <form method="POST" action="/predict">
+            <label for="symptoms">Please select the symptoms you are experiencing:</label><br>
+            <div class="checkbox-group">
+                {% for symptom in symptoms %}
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="{{ symptom }}" value="1" onclick="updateValue(this)"> {{ symptom }}
+                        <input type="hidden" name="{{ symptom }}" value="0">
+                    </label>
+                {% endfor %}
+            </div>
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+
+    <script>
+        function updateValue(checkbox) {
+            const hiddenInput = checkbox.nextElementSibling; // Get the hidden input
+            if (checkbox.checked) {
+                hiddenInput.value = "1"; // Update the value to 1 when checked
+            } else {
+                hiddenInput.value = "0"; // Update the value to 0 when unchecked
+            }
+        }
+    </script>
+</body>
+</html>

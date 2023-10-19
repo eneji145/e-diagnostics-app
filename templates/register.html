@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <!-- Add any CSS styles or external stylesheet links here -->
+    <style>
+        /* Style for the body */
+        body {
+            background-color: #FFD700; /* Use a warmer shade of yellow (#FFD700) */
+            text-align: center; /* Center text horizontally */
+            font-family: 'Open Sans', sans-serif; /* Use the 'Open Sans' font */
+            background-image: url("/static/images/elevated-view-spilled-pills-stethoscope-laptop-with-succulent-plant-isolated-white-surface.jpg");
+            background-repeat: no-repeat;
+            background-size: cover; /* Cover the entire background */
+        }
+
+        /* Style for the container div */
+        .container {
+            background-color: rgba(255, 255, 255, 0.9); /* Set background color for the container with transparency */
+            padding: 20px; /* Add some padding to the container */
+            border-radius: 8px; /* Add rounded corners to the container */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a box shadow for a subtle effect */
+            width: 300px; /* Set a fixed width for the container */
+            margin: 0 auto; /* Center the container horizontally */
+            margin-top: 50px; /* Add some top margin for spacing */
+        }
+
+        /* Style for the heading (E-diagnostics) */
+        h1 {
+            color: black; /* Set text color to black */
+            font-size: 36px; /* Increase font size */
+            margin-bottom: 20px; /* Add bottom margin for spacing */
+        }
+
+        /* Style for the form labels and inputs */
+        label {
+            display: block; /* Display labels as block elements */
+            margin-top: 10px; /* Add top margin for spacing between labels and inputs */
+            font-weight: bold; /* Make labels bold */
+            text-align: left; /* Align labels to the left */
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="number"] {
+            width: 90%; /* Make input fields full width of the container */
+            padding: 10px; /* Add padding to input fields */
+            margin-bottom: 10px; /* Reduce bottom margin for less spacing between inputs */
+            border: 1px solid #ccc; /* Add a border to input fields */
+            border-radius: 4px; /* Add rounded corners to input fields */
+        }
+
+        /* Style for the registration note */
+        .registration-note {
+            background-color: white; /* Set background color for the note */
+            padding: 20px; /* Add padding to the note */
+            border-radius: 8px; /* Add rounded corners to the note */
+            margin-top: 20px; /* Add top margin for spacing between the form and note */
+            text-align: left; /* Align text to the left */
+        }
+
+        /* Style for the chat box sign */
+        .chat-box-sign {
+            background-color: white; /* Set background color for the chat box sign */
+            padding: 10px; /* Add padding to the sign */
+            border-radius: 4px; /* Add rounded corners to the sign */
+            margin-top: 20px; /* Add top margin for spacing between the note and sign */
+            text-align: center; /* Center text horizontally */
+            font-weight: bold; /* Make text bold */
+        }
+
+        /* Style for the disclaimer */
+        .disclaimer {
+            background-color: white; /* Set background color for the disclaimer */
+            padding: 20px; /* Add padding to the disclaimer */
+            border-radius: 8px; /* Add rounded corners to the disclaimer */
+            margin-top: 20px; /* Add top margin for spacing between the chat box sign and disclaimer */
+            text-align: left; /* Align text to the left */
+        }
+    </style>
+
+    <!-- Link to Google Fonts for 'Open Sans' font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+</head>
+<body>
+    <div class="container">
+        <h1>E-diagnostics</h1>
+        <form method="POST">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required><br>  <!-- Add the Age field -->
+
+            <label for="blood_group">Blood Group:</label>
+            <select id="blood_group" name="blood_group" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+            </select><br>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required><br>
+
+            <input type="submit" value="Register">
+        </form>
+        <p>Already have an account? <a href="/login">Login here</a></p>
+    </div>
+
+    <div class="registration-note">
+        <p>Do you feel nauseated, shivering, or have a sore throat, but aren't sure if you should see a doctor or if you could just use some simple home remedies instead? In the age of the technological revolution, one can expect to have apps that provide easy solutions and point the user towards possible conditions. This is exactly what E-diagnosis promises with its services.</p>
+    </div>
+
+    <div class="chat-box-sign">
+        <p>Let’s start with the symptom that’s troubling you the most.</p>
+    </div>
+
+    <div class="disclaimer">
+        <p>Disclaimer - "E-diagnosis does not provide a medical diagnosis, and should not replace the judgment of a licensed healthcare practitioner. It provides information to help guide your decision making based on readily available information about symptoms. If you have any questions or concerns about the output of E-diagnosis, consult your licensed healthcare practitioner.</p>
+    </div>
+</body>
+</html>

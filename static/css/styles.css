@@ -1,0 +1,83 @@
+/* styles.css */
+
+/* Reset default browser styles */
+body,
+h1,
+form {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.container {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="number"],
+input[type="text"],
+input[type="checkbox"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="checkbox"] {
+    width: auto;
+    margin-top: 0;
+    /* Add your custom checkbox styling here if needed */
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Additional styling for the symptoms checkboxes */
+.checkbox-group {
+    display: flex; /* Arrange checkboxes horizontally */
+    flex-wrap: wrap; /* Wrap to the next line if needed */
+}
+
+.checkbox-label {
+    display: flex; /* Align checkbox and label horizontally */
+    align-items: center; /* Center vertically */
+    margin-right: 20px; /* Adjust spacing between checkboxes */
+}
